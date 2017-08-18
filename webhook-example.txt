@@ -1,0 +1,38 @@
+Category: device
+Action: Insert
+From: Task
+User: Queued Task
+Time Stamp: 2017-08-17 21:57:22.801909+00:00
+Data:
+```{
+"device_category_id": "6",
+"asset_profile_id": null,
+"where_at": "",
+"bladeno": "",
+"first_added": "2017-08-17 21:57:22.569279+00",
+"type_id": "3",
+"serial_no": "",
+"autoobj_id": null,
+"fiber_switch": "f",
+"device_bhost_id": null,
+"virtual_host": "f",
+"service_level_id": "1",
+"storage_room_id": null,
+"id": "1054",
+"custom_fields": "",
+"name": "TBSGOSAPP01",
+"building_id": null,
+"uuid": "128970FC-6B70-4E2E-904E-C7E703B80A68",
+"notes": "",
+"hardware_id": null,
+"asset_no": "",
+"in_service": "t",
+"switch": "f",
+"sub_type_id": null,
+"virtual_subtype": "19",
+"change_setpoint": null,
+"live_id": null,
+"blade_chassis": "f",
+"customer_id": null,
+"device_vhost_id": null
+}```
