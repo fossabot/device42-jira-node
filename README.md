@@ -12,7 +12,7 @@ Demo implementation of a Node.js server-side app to accept data from Device42 an
 <!-- /DESCRIPTION -->
 
 
-## INSTALLATION
+## Install
 
 ```
 $ git clone https://github.com/kreig303/d42test.git
@@ -20,6 +20,8 @@ $ cd d42test
 $ npm install
 $ node server.js
 ```
+
+You will also want to use [Postman](https://www.getpostman.com/) for the demo collection in `/etc`.
 
 <!-- HISTORY/ -->
 

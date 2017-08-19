@@ -1,45 +1,40 @@
 {
-  "name": "d42test",
-  "version": "0.0.1",
-  "description": "Demo implementation of a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "projectz compile",
-    "posttest": "npm run compile"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kreig303/d42test.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kreig303/d42test/issues"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
-  "maintainers": [
-    "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
-  ],
-  "contributors": [
-    "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "good": "^7.2.0",
-    "good-console": "^6.4.0",
-    "good-squeeze": "^5.0.2",
-    "handlebars": "^4.0.10",
-    "hapi": "^16.5.2",
-    "hoek": "^4.2.0",
-    "inert": "^4.2.1",
-    "joi": "^10.6.0",
-    "lout": "^10.0.2",
-    "path": "^0.12.7",
-    "vision": "^4.1.1"
-  },
-  "devDependencies": {
-    "projectz": "^1.4.0"
-  }
+    "name": "d42test",
+    "version": "0.0.1",
+    "description": "Demo implementation of a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "compile": "projectz compile",
+        "posttest": "npm run compile"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kreig303/d42test.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kreig303/d42test/issues"
+    },
+    "engines": {
+        "node": ">=6.0.0"
+    },
+    "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
+    "maintainers": [
+        "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+    ],
+    "contributors": [
+        "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "catbox": "^7.1.5",
+        "catbox-disk": "^2.0.9",
+        "catbox-memory": "^2.0.4",
+        "hapi": "^16.5.2",
+        "hoek": "^4.2.0",
+        "joi": "^10.6.0"
+    },
+    "devDependencies": {
+        "projectz": "^1.4.0"
+    }
 }
