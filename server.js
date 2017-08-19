@@ -20,15 +20,15 @@ server.connection({ port: 3000 });
 server.route({
     method: ['POST', 'PUT'],
     path: '/',
-    handler: function (request, reply) {
+    handler: function(request, reply) {
         reply('created').code(201); // do-something
     },
 });
 server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, reply) {
-        reply('Hello!'); // do-something
+    handler: function(request, reply) {
+        reply('The Server is running and capable of accepting POST/PUT'); // do-something
     },
 });
 
