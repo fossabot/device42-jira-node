@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "d42",
+		"_postman_id": "e143f8d5-b243-a432-b6d8-d8a71e6e5642",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST data from d42",
+			"request": {
+				"url": "",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Category: device\nAction: Insert\nFrom: Task\nUser: Queued Task\nTime Stamp: 2017-08-17 21:57:22.801909+00:00\nData:\n```{\n\"device_category_id\": \"6\",\n\"asset_profile_id\": null,\n\"where_at\": \"\",\n\"bladeno\": \"\",\n\"first_added\": \"2017-08-17 21:57:22.569279+00\",\n\"type_id\": \"3\",\n\"serial_no\": \"\",\n\"autoobj_id\": null,\n\"fiber_switch\": \"f\",\n\"device_bhost_id\": null,\n\"virtual_host\": \"f\",\n\"service_level_id\": \"1\",\n\"storage_room_id\": null,\n\"id\": \"1054\",\n\"custom_fields\": \"\",\n\"name\": \"TBSGOSAPP01\",\n\"building_id\": null,\n\"uuid\": \"128970FC-6B70-4E2E-904E-C7E703B80A68\",\n\"notes\": \"\",\n\"hardware_id\": null,\n\"asset_no\": \"\",\n\"in_service\": \"t\",\n\"switch\": \"f\",\n\"sub_type_id\": null,\n\"virtual_subtype\": \"19\",\n\"change_setpoint\": null,\n\"live_id\": null,\n\"blade_chassis\": \"f\",\n\"customer_id\": null,\n\"device_vhost_id\": null\n}```"
+				},
+				"description": "Sample POST data for demo functionality."
+			},
+			"response": []
+		}
+	]
+}
