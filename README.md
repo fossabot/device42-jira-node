@@ -1,5 +1,3 @@
-# d42test
-
 <!-- TITLE/ -->
 
 <h1>d42test</h1>
