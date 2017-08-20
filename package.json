@@ -34,7 +34,6 @@
         "catbox-disk": "^2.0.9",
         "catbox-memory": "^2.0.4",
         "confidence": "^3.0.2",
-        "dotenv": "^4.0.0",
         "hapi": "^16.5.2",
         "hoek": "^4.2.0",
         "jira-client": "^6.4.0",
