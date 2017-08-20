@@ -1,13 +1,11 @@
 'use strict';
 
 const Hapi = require('hapi'); // hapi router
+const Config = require('./config.js')
 
 const server = new Hapi.Server({
-    cache: require('catbox-memory'),
-    debug: {
-        log: ['*'],
-        request: ['*']
-    },
+    cache: require(Config.get('/cache')),
+    debug: Config.get('/debug_level'),
 });
 
 server.connection({ port: 5050 });

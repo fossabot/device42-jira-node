@@ -31,8 +31,19 @@ exports.register = (server, options, next) => {
             }
         },
         handler: (request, reply) => {
-            server.log('info', request.payload)
-            const jira = new Jira(Config.get('/jira'));
+            const jiraCall = new Jira(Config.get('/jira'));
+
+            let issue = {};
+            issue['fields'] = {};
+            issue.fields['project'] = {};
+            issue.fields.project.key = process.env.JIRA_PROJ;
+            issue.fields.summary = request.payload.Action;
+            issue.fields.description = request.payload.Data;
+            issue.fields['issuetype'] = {};
+            issue.fields.issuetype.name = process.env.JIRA_TYPE;
+            server.log('info', issue)
+
+            jiraCall.addNewIssue(issue);
 
             reply({
                 message: `Data accepted via ${ request.method.toUpperCase() }.`

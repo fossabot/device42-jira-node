@@ -4,17 +4,36 @@ const Confidence = require('confidence');
 const Dotenv = require('dotenv').config();
 
 const Store = new Confidence.Store({
-    cache: process.env.HAPI_CACHE_TYPE,
+    cache: {
+        $filter: 'where',
+        prod: 'catbox-memory',
+        test: 'catbox-memory',
+        $default: 'catbox-memory',
+    },
+    debug_level: {
+        $filter: 'where',
+        prod: {},
+        test: {
+            log: ['error'],
+            request: ['error']
+        },
+        $default: {
+            log: ['*'],
+            request: ['*']
+        },
+    },
     jira: {
         protocol: 'https',
         host: process.env.JIRA_HOST,
         username: process.env.JIRA_USER,
         password: process.env.JIRA_PASS,
-        apiVersion: '2',
-        strictSSL: true
-    }
+    },
 });
 
+const criterion = {
+    where: process.env.NODE_ENV
+};
+
 exports.get = (key) => {
-    return Store.get(key, null);
+    return Store.get(key, criterion);
 };
