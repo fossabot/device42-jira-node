@@ -1,45 +1,45 @@
 {
-  "name": "device42-jira-node",
-  "version": "0.3.0",
-  "description": "Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
-  "main": "index.js",
-  "scripts": {
-    "start:prod": "NODE_ENV=prod node ./index.js",
-    "start:test": "NODE_ENV=test node ./index.js",
-    "start": "NODE_ENV=dev node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "projectz compile",
-    "posttest": "npm run compile"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kreig303/d42test.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kreig303/d42test/issues"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
-  "maintainers": [
-    "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
-  ],
-  "contributors": [
-    "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "catbox": "^7.1.5",
-    "catbox-disk": "^2.0.9",
-    "catbox-memory": "^2.0.4",
-    "confidence": "^3.0.2",
-    "hapi": "^16.5.2",
-    "hoek": "^4.2.0",
-    "jira-client": "^6.4.0",
-    "joi": "^10.6.0"
-  },
-  "devDependencies": {
-    "projectz": "^1.4.0"
-  }
+    "name": "device42-jira-node",
+    "version": "0.3.0",
+    "description": "Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
+    "main": "index.js",
+    "scripts": {
+        "start:prod": "NODE_ENV=prod node ./index.js",
+        "start:test": "NODE_ENV=test node ./index.js",
+        "start": "NODE_ENV=dev node ./index.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "compile": "projectz compile",
+        "posttest": "npm run compile"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kreig303/device42-jira-node.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kreig303/device42-jira-node/issues"
+    },
+    "engines": {
+        "node": ">=6.0.0"
+    },
+    "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
+    "maintainers": [
+        "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+    ],
+    "contributors": [
+        "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "catbox": "^7.1.5",
+        "catbox-disk": "^2.0.9",
+        "catbox-memory": "^2.0.4",
+        "confidence": "^3.0.2",
+        "hapi": "^16.5.2",
+        "hoek": "^4.2.0",
+        "jira-client": "^6.4.0",
+        "joi": "^10.6.0"
+    },
+    "devDependencies": {
+        "projectz": "^1.4.0"
+    }
 }
