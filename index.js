@@ -1,6 +1,6 @@
 'use strict';
 
-const Hapi = require('hapi'); // hapi router 
+const Hapi = require('hapi'); // hapi router
 
 const Joi = require('joi'); // hapi validator
 const Hoek = require('hoek'); // hapi utils
@@ -28,13 +28,14 @@ server.register({
     routes: { prefix: '/api' }
 }, (err) => {
     if (err) {
-        console.log(err);
+        server.log('error', err);
     } else {
         server.start((err) => {
             if (err) {
-                console.log(err);
+                server.log('error', err);
             } else {
-                server.log('info', 'Demo API server is running on port ' + server.info.port + '.');
+                server.log('info', `Environment is '${ process.env.NODE_ENV }'`);
+                server.log('info', `Demo API server is running on port ${ server.info.port }.`);
             };
         });
     }
