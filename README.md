@@ -1,15 +1,16 @@
 <!-- TITLE/ -->
 
-<h1>d42test</h1>
+<h1>device42-jira-node</h1>
 
 <!-- /TITLE -->
 
 
 <!-- DESCRIPTION/ -->
 
-Demo implementation of a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.
+Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.
 
 <!-- /DESCRIPTION -->
+
 
 ---
 
