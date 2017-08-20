@@ -1,7 +1,5 @@
 'use strict';
 
-import { Hapi } from 'hapi'; // hapi router 
-
 const Hapi = require('hapi'); // hapi router 
 
 const Joi = require('joi'); // hapi validator

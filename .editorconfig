@@ -8,3 +8,6 @@ indent_size = 4
 [*.less]
 indent_style = space
 indent_size = 4
+[*.json]
+indent_style = space
+indent_size = 4
