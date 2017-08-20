@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "GET",
+			"name": "GET Request",
 			"request": {
 				"url": "http://localhost:5050/api",
 				"method": "GET",
@@ -19,51 +19,51 @@
 			"response": []
 		},
 		{
-			"name": "PATCH",
-			"request": {
-				"url": "http://localhost:5050/api",
-				"method": "PATCH",
-				"header": [],
-				"body": {},
-				"description": "Ensure server is up."
-			},
-			"response": []
-		},
-		{
-			"name": "POST",
+			"name": "POST Request",
 			"request": {
 				"url": "http://localhost:5050/api",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
+						"value": "text/plain",
 						"description": ""
 					}
 				],
 				"body": {
-					"mode": "raw",
-					"raw": "Category: device\nAction: Insert\nFrom: Task\nUser: Queued Task\nTime Stamp: 2017-08-17 21:57:22.801909+00:00\nData:\n```{\n\"device_category_id\": \"6\",\n\"asset_profile_id\": null,\n\"where_at\": \"\",\n\"bladeno\": \"\",\n\"first_added\": \"2017-08-17 21:57:22.569279+00\",\n\"type_id\": \"3\",\n\"serial_no\": \"\",\n\"autoobj_id\": null,\n\"fiber_switch\": \"f\",\n\"device_bhost_id\": null,\n\"virtual_host\": \"f\",\n\"service_level_id\": \"1\",\n\"storage_room_id\": null,\n\"id\": \"1054\",\n\"custom_fields\": \"\",\n\"name\": \"TBSGOSAPP01\",\n\"building_id\": null,\n\"uuid\": \"128970FC-6B70-4E2E-904E-C7E703B80A68\",\n\"notes\": \"\",\n\"hardware_id\": null,\n\"asset_no\": \"\",\n\"in_service\": \"t\",\n\"switch\": \"f\",\n\"sub_type_id\": null,\n\"virtual_subtype\": \"19\",\n\"change_setpoint\": null,\n\"live_id\": null,\n\"blade_chassis\": \"f\",\n\"customer_id\": null,\n\"device_vhost_id\": null\n}```"
-				},
-				"description": "Sample POST data for demo functionality."
-			},
-			"response": []
-		},
-		{
-			"name": "PUT",
-			"request": {
-				"url": "http://localhost:5050/api",
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "Category: device\nAction: Insert\nFrom: Task\nUser: Queued Task\nTime Stamp: 2017-08-17 21:57:22.801909+00:00\nData:\n```{\n\"device_category_id\": \"6\",\n\"asset_profile_id\": null,\n\"where_at\": \"\",\n\"bladeno\": \"\",\n\"first_added\": \"2017-08-17 21:57:22.569279+00\",\n\"type_id\": \"3\",\n\"serial_no\": \"\",\n\"autoobj_id\": null,\n\"fiber_switch\": \"f\",\n\"device_bhost_id\": null,\n\"virtual_host\": \"f\",\n\"service_level_id\": \"1\",\n\"storage_room_id\": null,\n\"id\": \"1054\",\n\"custom_fields\": \"\",\n\"name\": \"TBSGOSAPP01\",\n\"building_id\": null,\n\"uuid\": \"128970FC-6B70-4E2E-904E-C7E703B80A68\",\n\"notes\": \"\",\n\"hardware_id\": null,\n\"asset_no\": \"\",\n\"in_service\": \"t\",\n\"switch\": \"f\",\n\"sub_type_id\": null,\n\"virtual_subtype\": \"19\",\n\"change_setpoint\": null,\n\"live_id\": null,\n\"blade_chassis\": \"f\",\n\"customer_id\": null,\n\"device_vhost_id\": null\n}```"
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Category",
+							"value": "device",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Action",
+							"value": "Insert",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "From",
+							"value": "Task",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "User",
+							"value": "Queued Task",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Data",
+							"value": "\n```{\n\"device_category_id\": \"6\",\n\"asset_profile_id\": null,\n\"where_at\": \"\",\n\"bladeno\": \"\",\n\"first_added\": \"2017-08-17 21:57:22.569279+00\",\n\"type_id\": \"3\",\n\"serial_no\": \"\",\n\"autoobj_id\": null,\n\"fiber_switch\": \"f\",\n\"device_bhost_id\": null,\n\"virtual_host\": \"f\",\n\"service_level_id\": \"1\",\n\"storage_room_id\": null,\n\"id\": \"1054\",\n\"custom_fields\": \"\",\n\"name\": \"TBSGOSAPP01\",\n\"building_id\": null,\n\"uuid\": \"128970FC-6B70-4E2E-904E-C7E703B80A68\",\n\"notes\": \"\",\n\"hardware_id\": null,\n\"asset_no\": \"\",\n\"in_service\": \"t\",\n\"switch\": \"f\",\n\"sub_type_id\": null,\n\"virtual_subtype\": \"19\",\n\"change_setpoint\": null,\n\"live_id\": null,\n\"blade_chassis\": \"f\",\n\"customer_id\": null,\n\"device_vhost_id\": null\n}```",
+							"description": "",
+							"type": "text"
+						}
+					]
 				},
 				"description": "Sample PUT data."
 			},

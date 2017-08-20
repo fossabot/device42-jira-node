@@ -1,26 +1,20 @@
 'use strict';
 
 const Confidence = require('confidence');
+const Dotenv = require('dotenv').config();
 
-const store = new Confidence.Store({
-    cache: {
-        $filter: 'env',
-        test: 'catbox-memory',
-        prod: 'catbox-memory',
-        $default: 'catbox-memory',
-    },
+const Store = new Confidence.Store({
+    cache: process.env.HAPI_CACHE_TYPE,
     jira: {
-        $filter: 'env',
-        prod: {},
-        test: {},
-        $default: {},
+        protocol: 'https',
+        host: process.env.JIRA_HOST,
+        username: process.env.JIRA_USER,
+        password: process.env.JIRA_PASS,
+        apiVersion: '2',
+        strictSSL: true
     }
 });
 
-const criteria = {
-    env: process.env.NODE_ENV
-};
-
 exports.get = (key) => {
-    return store.get(key, criteria);
+    return Store.get(key, null);
 };

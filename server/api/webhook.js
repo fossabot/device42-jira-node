@@ -1,6 +1,8 @@
 'use strict';
 
 const Jira = require('jira-client');
+const Joi = require('joi');
+const Config = require('../../config.js')
 
 exports.register = (server, options, next) => {
 
@@ -9,27 +11,31 @@ exports.register = (server, options, next) => {
         path: '/',
         handler: (request, reply) => {
             reply({
-                message: 'Data NOT accepted via ' + request.method.toUpperCase() + '.'
+                message: `No ${ request.method.toUpperCase() } method configured.`
             }).code(405);
         }
     });
 
     server.route({
-        method: ['POST', 'PUT'],
+        method: ['POST'],
         path: '/',
+        config: {
+            validate: {
+                payload: {
+                    Category: Joi.string(),
+                    Action: Joi.string(),
+                    From: Joi.string(),
+                    User: Joi.string(),
+                    Data: Joi.string(),
+                }
+            }
+        },
         handler: (request, reply) => {
-
-            const jira = new Jira({
-                protocol: 'https',
-                host: 'jira.somehost.com',
-                username: 'username',
-                password: 'password',
-                apiVersion: '2',
-                strictSSL: true
-            });
+            server.log('info', request.payload)
+            const jira = new Jira(Config.get('/jira'));
 
             reply({
-                message: 'Data accepted via ' + request.method.toUpperCase() + '.'
+                message: `Data accepted via ${ request.method.toUpperCase() }.`
             }).code(202);
         },
     });
