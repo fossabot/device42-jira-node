@@ -22,29 +22,28 @@ exports.register = (server, options, next) => {
         config: {
             validate: {
                 payload: {
-                    Category: Joi.string(),
-                    Action: Joi.string(),
-                    From: Joi.string(),
-                    User: Joi.string(),
-                    Data: Joi.string(),
+                    category: Joi.string(),
+                    from: Joi.string(),
+                    user: Joi.string(),
+                    time_stamp: Joi.string(),
+                    action: Joi.string(),
+                    data: Joi.any(),
                 }
             }
         },
         handler: (request, reply) => {
             const jiraCall = new Jira(Config.get('/jira'));
-
+            server.log('debug', request.payload)
             let issue = {};
             issue['fields'] = {};
             issue.fields['project'] = {};
             issue.fields.project.key = process.env.JIRA_PROJ;
-            issue.fields.summary = request.payload.Action;
-            issue.fields.description = request.payload.Data;
+            issue.fields.summary = request.payload.action;
+            issue.fields.description = JSON.stringify(request.payload.data);
             issue.fields['issuetype'] = {};
             issue.fields.issuetype.name = process.env.JIRA_TYPE;
-            server.log('info', issue)
-
+            server.log('debug', issue)
             jiraCall.addNewIssue(issue);
-
             reply({
                 message: `Data accepted via ${ request.method.toUpperCase() }.`
             }).code(202);
