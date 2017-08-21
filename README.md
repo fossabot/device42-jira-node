@@ -35,19 +35,19 @@ $ npm start
 ### Postman
 
 - Load the demo collection from `/etc` into Postman.
-- Trigger the `POST` or `PUT` action (same result) to get verification that the API call is fired.
+- Trigger the `POST` action to get verification that the API call connects.
 
 ### JIRA
 
-- Edit `config.js` file to include your environment deets (using the `$default` as a reference.)
-- Trigger the `POST` or `PUT` action again in Postman.
+- Create `.env` file with JIRA details (use `.env-sample` as a reference.)
+- Trigger the `POST` action again in Postman.
 - See if Issues were raised in your JIRA install.
 
 ### Device42
 
 - Setup the appropriate webhook Endpoint in your Device42 installation.
-- Now setup the Action in your Device42 installation.
-- Watch the magic happen.
+- Now setup the Action in your Device42 installation with a reference to the Endpoint.
+- Make changes per your Action and watch the magic happen.
 
 ---
 
