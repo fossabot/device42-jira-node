@@ -2,7 +2,7 @@
 
 const Jira = require('jira-client');
 const Joi = require('joi');
-const Config = require('../../config.js')
+const Config = require('../../config')
 
 exports.register = (server, options, next) => {
 
