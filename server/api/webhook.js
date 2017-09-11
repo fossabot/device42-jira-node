@@ -2,7 +2,8 @@
 
 const Jira = require('jira-client');
 const Joi = require('joi');
-const Config = require('../../config')
+const Config = require('../../config');
+const Boom = require('boom');
 
 exports.register = (server, options, next) => {
 
@@ -43,10 +44,18 @@ exports.register = (server, options, next) => {
             issue.fields['issuetype'] = {};
             issue.fields.issuetype.name = process.env.JIRA_TYPE;
             server.log('debug', issue)
-            jiraCall.addNewIssue(issue);
-            reply({
-                message: `Data accepted via ${ request.method.toUpperCase() }.`
-            }).code(202);
+            jiraCall.addNewIssue(issue)
+                .then(() => {
+                    return reply({
+                        message: `Data accepted via ${ request.method.toUpperCase() }.`
+                    }).code(202);
+                })
+                .catch((err) => {
+                    server.log('error', err)
+                    return reply({
+                        message: Boom.boomify(err)
+                    }).code(err.statusCode);
+                })
         },
     });
 

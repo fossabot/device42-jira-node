@@ -4,18 +4,15 @@ const Confidence = require('confidence');
 const Dotenv = require('dotenv').config();
 
 const Store = new Confidence.Store({
-    cache: {
-        $filter: 'where',
-        prod: 'catbox-memory',
-        test: 'catbox-memory',
-        $default: 'catbox-memory',
-    },
     debug_level: {
         $filter: 'where',
-        prod: {},
+        prod: {
+            log: ['error'],
+            request: ['error', 'uncaught']
+        },
         test: {
             log: ['error'],
-            request: ['error']
+            request: ['error', 'uncaught']
         },
         $default: {
             log: ['*'],

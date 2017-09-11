@@ -4,7 +4,6 @@ const Hapi = require('hapi'); // hapi router
 const Config = require('./config')
 
 const server = new Hapi.Server({
-    cache: require(Config.get('/cache')),
     debug: Config.get('/debug_level'),
 });
 
