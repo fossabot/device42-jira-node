@@ -36,7 +36,10 @@
     },
 
     "plugins": [
-        // e.g. "react" (must run `npm install eslint-plugin-react` first)
+        "security"
+    ],
+    "extends": [
+        "plugin:security/recommended"
     ],
 
     "rules": {
