@@ -55,7 +55,7 @@ $ npm start
 
 <h2>History</h2>
 
-<a href="https://github.com/kreig303/d42test/releases">Discover the release history by heading on over to the releases page.</a>
+<a href="https://github.com/kreig303/device42-jira-node/releases">Discover the release history by heading on over to the releases page.</a>
 
 <!-- /HISTORY -->
 
@@ -64,7 +64,7 @@ $ npm start
 
 <h2>Contribute</h2>
 
-<a href="https://github.com/kreig303/d42test/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
+<a href="https://github.com/kreig303/device42-jira-node/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
 <!-- /CONTRIBUTE -->
 
@@ -77,7 +77,7 @@ $ npm start
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="http://kreig.me">Kreig Zimmerman</a> — <a href="https://github.com/kreig303/d42test/commits?author=kreig303" title="View the GitHub contributions of Kreig Zimmerman on repository kreig303/d42test">view contributions</a></li></ul>
+<ul><li><a href="http://kreig.me">Kreig Zimmerman</a> — <a href="https://github.com/kreig303/device42-jira-node/commits?author=kreig303" title="View the GitHub contributions of Kreig Zimmerman on repository kreig303/device42-jira-node">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -89,9 +89,9 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://kreig.me">Kreig Zimmerman</a> — <a href="https://github.com/kreig303/d42test/commits?author=kreig303" title="View the GitHub contributions of Kreig Zimmerman on repository kreig303/d42test">view contributions</a></li></ul>
+<ul><li><a href="http://kreig.me">Kreig Zimmerman</a> — <a href="https://github.com/kreig303/device42-jira-node/commits?author=kreig303" title="View the GitHub contributions of Kreig Zimmerman on repository kreig303/device42-jira-node">view contributions</a></li></ul>
 
-<a href="https://github.com/kreig303/d42test/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
+<a href="https://github.com/kreig303/device42-jira-node/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
 <!-- /BACKERS -->
 
