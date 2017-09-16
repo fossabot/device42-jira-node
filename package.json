@@ -1,6 +1,6 @@
 {
   "name": "device42-jira-node",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "description": "Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
   "scripts": {
     "start:dev": "nodemon --ignore test/ ./index.js",
@@ -43,7 +43,7 @@
     "hapi-swagger": "^7.7.1",
     "inert": "^4.2.1",
     "jira-client": "^6.4.0",
-    "joi": "^10.6.0",
+    "joi": "^11.0.1",
     "vision": "^4.1.1"
   },
   "devDependencies": {
