@@ -1,51 +1,59 @@
 {
-  "name": "device42-jira-node",
-  "version": "0.4.0",
-  "description": "Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
-  "scripts": {
-    "start:dev": "nodemon --ignore test/ ./index.js",
-    "start": "node ./index.js",
-    "test": "lab -c",
-    "compile": "projectz compile",
-    "posttest": "npm run compile"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kreig303/device42-jira-node.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kreig303/device42-jira-node/issues"
-  },
-  "engines": {
-    "node": ">=6.11.3"
-  },
-  "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
-  "maintainers": [
-    "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
-  ],
-  "contributors": [
-    "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "boom": "^5.2.0",
-    "confidence": "^3.0.2",
-    "dotenv": "^4.0.0",
-    "hapi": "^16.6.0",
-    "hapi-swagger": "^7.7.1",
-    "inert": "^4.2.1",
-    "jira-client": "^6.4.0",
-    "joi": "^10.6.0",
-    "vision": "^4.1.1"
-  },
-  "devDependencies": {
-    "code": "^4.1.0",
-    "eslint": "^4.7.0",
-    "eslint-config-hapi": "^10.1.0",
-    "eslint-plugin-security": "^1.4.0",
-    "jshint": "^2.9.5",
-    "lab": "^14.2.2",
-    "nodemon": "^1.12.1",
-    "projectz": "^1.4.0"
-  }
+    "name": "device42-jira-node",
+    "version": "0.4.0",
+    "description": "Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
+    "scripts": {
+        "start:dev": "nodemon --ignore test/ ./index.js",
+        "start": "node ./index.js",
+        "test": "lab -c",
+        "compile": "projectz compile",
+        "posttest": "npm run compile"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kreig303/device42-jira-node.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kreig303/device42-jira-node/issues"
+    },
+    "engines": {
+        "node": ">=6.11.3"
+    },
+    "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
+    "maintainers": [
+        "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+    ],
+    "contributors": [
+        "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+    ],
+    "license": "MIT",
+    "badges": {
+        "list": [
+            "travisci",
+            "daviddm",
+            "daviddmdev"
+        ],
+        "config": {}
+    },
+    "dependencies": {
+        "boom": "^5.2.0",
+        "confidence": "^3.0.2",
+        "dotenv": "^4.0.0",
+        "hapi": "^16.6.0",
+        "hapi-swagger": "^7.7.1",
+        "inert": "^4.2.1",
+        "jira-client": "^6.4.0",
+        "joi": "^10.6.0",
+        "vision": "^4.1.1"
+    },
+    "devDependencies": {
+        "code": "^4.1.0",
+        "eslint": "^4.7.0",
+        "eslint-config-hapi": "^10.1.0",
+        "eslint-plugin-security": "^1.4.0",
+        "jshint": "^2.9.5",
+        "lab": "^14.2.2",
+        "nodemon": "^1.12.1",
+        "projectz": "^1.4.0"
+    }
 }
