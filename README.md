@@ -5,6 +5,15 @@
 <!-- /TITLE -->
 
 
+<!-- BADGES/ -->
+
+<span class="badge-travisci"><a href="http://travis-ci.org/kreig303/device42-jira-node" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/kreig303/device42-jira-node/master.svg" alt="Travis CI Build Status" /></a></span>
+<span class="badge-daviddm"><a href="https://david-dm.org/kreig303/device42-jira-node" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/kreig303/device42-jira-node.svg" alt="Dependency Status" /></a></span>
+<span class="badge-daviddmdev"><a href="https://david-dm.org/kreig303/device42-jira-node#info=devDependencies" title="View the status of this project's development dependencies on DavidDM"><img src="https://img.shields.io/david/dev/kreig303/device42-jira-node.svg" alt="Dev Dependency Status" /></a></span>
+
+<!-- /BADGES -->
+
+
 <!-- DESCRIPTION/ -->
 
 Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.
