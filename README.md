@@ -62,7 +62,7 @@ $ npm start
 
 ## API Documentation
 
-API Documentation is available at (https://localhost:5050/documentation) once installed.
+API Documentation is available at (https://localhost:5050/docs) once installed.
 
 <!-- HISTORY/ -->
 

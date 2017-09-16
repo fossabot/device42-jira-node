@@ -5,7 +5,7 @@ const Joi = require('joi');
 const Config = require('../../config');
 const Boom = require('boom');
 
-exports.register = (server, options, next) => {
+module.exports.register = (server, options, next) => {
 
     server.route({
         method: '*',
@@ -22,8 +22,6 @@ exports.register = (server, options, next) => {
         method: ['POST'],
         path: '/',
         config: {
-            tags: ['api'],
-            description: 'This is the callback (webhook) which is to be activated by a call from the Device42 installation.',
             validate: {
                 payload: {
                     category: Joi.string(),
@@ -69,6 +67,6 @@ exports.register = (server, options, next) => {
 
 };
 
-exports.register.attributes = {
+module.exports.register.attributes = {
     pkg: require('../../package.json')
 };

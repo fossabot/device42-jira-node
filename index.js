@@ -1,18 +1,17 @@
 'use strict';
 
-const Package = require('./package');
-const Vision = require('vision');
-const Inert = require('inert');
-const Webhook = require('./server/api/index');
-const Swagger = require('hapi-swagger');
-const Server = require('./server');
+const Package = require('./package')
+const Vision = require('vision')
+const Inert = require('inert')
+const Webhook = require('./server/api/index')
+const Lout = require('lout')
+const Swagger = require('hapi-swagger')
+const Server = require('./server')
 
-const swaggerOpts = {
-    info: {
-        'title': 'Device42 to JIRA API Document',
-        'version': Package.version
-    }
-};
+const loutOpts = {
+    apiVersion: Package.version,
+}
+
 
 Server.register([
     Vision,
@@ -21,18 +20,18 @@ Server.register([
         routes: { prefix: '/api' }
     },
     {
-        register: Swagger,
-        options: swaggerOpts
+        register: Lout,
+        options: loutOpts
     }
 ], (err) => {
 
     if (err) {
         Server.log('error', err);
     }
-});
+})
 
 Server.start(() => {
 
     Server.log('info', `Environment is '${ process.env.NODE_ENV }'`);
     Server.log('info', `Demo API server is running on port ${ Server.info.port }`);
-});
+})
