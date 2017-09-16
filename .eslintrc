@@ -39,7 +39,8 @@
         "security"
     ],
     "extends": [
-        "plugin:security/recommended"
+        "plugin:security/recommended",
+        "hapi"
     ],
 
     "rules": {

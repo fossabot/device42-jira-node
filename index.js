@@ -1,36 +1,38 @@
 'use strict';
 
-const Hapi = require('hapi'); // hapi router
-const Config = require('./config')
+const Package = require('./package');
+const Vision = require('vision');
+const Inert = require('inert');
+const Webhook = require('./server/api/index');
+const Swagger = require('hapi-swagger');
+const Server = require('./server');
 
-const server = new Hapi.Server({
-    debug: Config.get('/debug_level'),
-});
-
-server.connection({ port: 5050 });
-
-server.route({
-    method: '*',
-    path: '/',
-    handler: (request, reply) => {
-        reply('Demo API server is running.');
-    },
-});
-
-server.register({
-    register: require('./server/api/webhook'),
-    routes: { prefix: '/api' }
-}, (err) => {
-    if (err) {
-        server.log('error', err);
-    } else {
-        server.start((err) => {
-            if (err) {
-                server.log('error', err);
-            } else {
-                server.log('info', `Environment is '${ process.env.NODE_ENV }'`);
-                server.log('info', `Demo API server is running on port ${ server.info.port }`);
-            };
-        });
+const swaggerOpts = {
+    info: {
+        'title': 'Device42 to JIRA API Document',
+        'version': Package.version
     }
+};
+
+Server.register([
+    Vision,
+    Inert, {
+        register: Webhook,
+        routes: { prefix: '/api' }
+    },
+    {
+        register: Swagger,
+        options: swaggerOpts
+    }
+], (err) => {
+
+    if (err) {
+        Server.log('error', err);
+    }
+});
+
+Server.start(() => {
+
+    Server.log('info', `Environment is '${ process.env.NODE_ENV }'`);
+    Server.log('info', `Demo API server is running on port ${ Server.info.port }`);
 });

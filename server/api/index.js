@@ -11,6 +11,7 @@ exports.register = (server, options, next) => {
         method: '*',
         path: '/',
         handler: (request, reply) => {
+
             reply({
                 message: `No ${ request.method.toUpperCase() } method configured.`
             }).code(405);
@@ -21,6 +22,8 @@ exports.register = (server, options, next) => {
         method: ['POST'],
         path: '/',
         config: {
+            tags: ['api'],
+            description: 'This is the callback (webhook) which is to be activated by a call from the Device42 installation.',
             validate: {
                 payload: {
                     category: Joi.string(),
@@ -33,9 +36,10 @@ exports.register = (server, options, next) => {
             }
         },
         handler: (request, reply) => {
+
             const jiraCall = new Jira(Config.get('/jira'));
             server.log('debug', request.payload)
-            let issue = {};
+            const issue = {};
             issue['fields'] = {};
             issue.fields['project'] = {};
             issue.fields.project.key = process.env.JIRA_PROJ;
@@ -46,17 +50,19 @@ exports.register = (server, options, next) => {
             server.log('debug', issue)
             jiraCall.addNewIssue(issue)
                 .then(() => {
+
                     return reply({
                         message: `Data accepted via ${ request.method.toUpperCase() }.`
                     }).code(202);
                 })
                 .catch((err) => {
+
                     server.log('error', err)
                     return reply({
                         message: Boom.boomify(err)
                     }).code(err.statusCode);
-                })
-        },
+                });
+        }
     });
 
     next();
