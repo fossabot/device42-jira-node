@@ -5,13 +5,11 @@ const Vision = require('vision')
 const Inert = require('inert')
 const Webhook = require('./server/api/index')
 const Lout = require('lout')
-const Swagger = require('hapi-swagger')
 const Server = require('./server')
 
 const loutOpts = {
     apiVersion: Package.version,
 }
-
 
 Server.register([
     Vision,

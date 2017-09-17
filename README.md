@@ -27,7 +27,7 @@ Sample code for a Node.js server-side app to accept data from Device42 and creat
 
 ### Software
 
-- [Boron](https://nodejs.org/download/release/latest-boron/) [LTS](https://github.com/nodejs/LTS) release of Node.
+- [Node 8](https://nodejs.org/download/release/latest-v8.x/)
 - [Postman](https://www.getpostman.com/)
 - [JIRA](https://www.atlassian.com/software/jira)
 - [Device42](http://www.device42.com/download/)

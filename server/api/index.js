@@ -33,7 +33,7 @@ module.exports.register = (server, options, next) => {
                 }
             }
         },
-        handler: (request, reply) => {
+        handler: async(request, reply) => {
 
             const jiraCall = new Jira(Config.get('/jira'));
             server.log('debug', request.payload)
@@ -46,23 +46,19 @@ module.exports.register = (server, options, next) => {
             issue.fields['issuetype'] = {};
             issue.fields.issuetype.name = process.env.JIRA_TYPE;
             server.log('debug', issue)
-            jiraCall.addNewIssue(issue)
-                .then(() => {
-
-                    return reply({
-                        message: `Data accepted via ${ request.method.toUpperCase() }.`
-                    }).code(202);
-                })
-                .catch((err) => {
-
-                    server.log('error', err)
-                    return reply({
-                        message: Boom.boomify(err)
-                    }).code(err.statusCode);
-                });
+            try {
+                await jiraCall.addNewIssue(issue)
+            } catch (err) {
+                server.log('error', err)
+                return reply({
+                    message: Boom.boomify(err)
+                }).code(err.statusCode);
+            }
+            return reply({
+                message: `Data accepted via ${ request.method.toUpperCase() }.`
+            }).code(202);
         }
-    });
-
+    })
     next();
 
 };

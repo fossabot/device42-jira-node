@@ -1,6 +1,6 @@
 {
   "name": "device42-jira-node",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "description": "Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
   "scripts": {
     "start:dev": "nodemon --ignore test/ ./index.js",
@@ -17,7 +17,7 @@
     "url": "https://github.com/kreig303/device42-jira-node/issues"
   },
   "engines": {
-    "node": ">=6.11.3"
+    "node": ">=8.0.0"
   },
   "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
   "maintainers": [
@@ -47,12 +47,12 @@
     "vision": "^4.1.1"
   },
   "devDependencies": {
-    "code": "^4.1.0",
+    "code": "^5.0.0",
     "eslint": "^4.7.0",
     "eslint-config-hapi": "^10.1.0",
     "eslint-plugin-security": "^1.4.0",
     "jshint": "^2.9.5",
-    "lab": "^14.2.2",
+    "lab": "14.3.0",
     "nodemon": "^1.12.1",
     "projectz": "^1.4.0"
   }
