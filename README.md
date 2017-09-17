@@ -23,6 +23,8 @@ Sample code for a Node 8+ server-side app to accept data from Device42 and creat
 
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kreig303/device42-jira-node.svg)](https://greenkeeper.io/)
+
 ## Install
 
 ### Required Software
