@@ -16,7 +16,7 @@
 
 <!-- DESCRIPTION/ -->
 
-Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.
+Sample code for a Node 8+ server-side app to accept data from Device42 and create a JIRA Issue with the result.
 
 <!-- /DESCRIPTION -->
 
@@ -25,7 +25,7 @@ Sample code for a Node.js server-side app to accept data from Device42 and creat
 
 ## Install
 
-### Software
+### Required Software
 
 - [Node 8](https://nodejs.org/download/release/latest-v8.x/)
 - [Postman](https://www.getpostman.com/)
@@ -37,32 +37,34 @@ Sample code for a Node.js server-side app to accept data from Device42 and creat
 ```
 $ git clone https://github.com/kreig303/device42-jira-node.git
 $ cd device42-jira-node
-$ npm install
-$ npm start
+$ npm i
+$ npm run start:dev
 ```
 
 ### Postman
 
-- Load the demo collection from `/etc` into Postman.
-- Trigger the `POST` action to get verification that the API call connects.
+- Load the collection from `/etc` into Postman.
+- Trigger the `GET` action to verify the server is up and accepting connections.
+- Trigger the `POST` action to get verification that the webhook is available.  It should return a `502` or `503` for now.
 
 ### JIRA
 
-- Create `.env` file with JIRA details (use `.env-sample` as a reference.)
-- Trigger the `POST` action again in Postman.
-- See if Issues were raised in your JIRA install.
+- Ensure you have a JIRA install either locally or in the cloud.
+- Create `.env` file at the root with JIRA details (use `.env-sample` as a reference.)
+- Trigger the `POST` action in Postman again.
+- See if Issue was raised in your JIRA install.
 
 ### Device42
 
 - Setup the appropriate webhook Endpoint in your Device42 installation.
 - Now setup the Action in your Device42 installation with a reference to the Endpoint.
-- Make changes per your Action and watch the magic happen.
+- Make changes per your Action and watch the results get sent to JIRA.
 
 ---
 
 ## API Documentation
 
-API Documentation is available at (https://localhost:5050/docs) once installed.
+API Documentation is available at (https://localhost:5050/docs) once installed.  Please note it is a very basic call i.e. the entire payload is not differentiated.
 
 <!-- HISTORY/ -->
 

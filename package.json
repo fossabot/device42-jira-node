@@ -1,7 +1,7 @@
 {
   "name": "device42-jira-node",
-  "version": "0.5.0",
-  "description": "Sample code for a Node.js server-side app to accept data from Device42 and create a JIRA Issue with the result.",
+  "version": "0.5.1",
+  "description": "Sample code for a Node 8+ server-side app to accept data from Device42 and create a JIRA Issue with the result.",
   "scripts": {
     "start:dev": "nodemon --ignore test/ ./index.js",
     "start": "node ./index.js",
