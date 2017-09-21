@@ -21,26 +21,25 @@ Sample code for a Node 8+ server-side app to accept data from Device42 and creat
 <!-- /DESCRIPTION -->
 
 
----
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/kreig303/device42-jira-node.svg)](https://greenkeeper.io/)
 
-## Install
+---
 
-### Required Software
+## Required Software
 
 - [Node 8](https://nodejs.org/download/release/latest-v8.x/)
 - [Postman](https://www.getpostman.com/)
 - [JIRA](https://www.atlassian.com/software/jira)
 - [Device42](http://www.device42.com/download/)
 
-### Node
+### Node 8
 
 ```
-$ git clone https://github.com/kreig303/device42-jira-node.git
-$ cd device42-jira-node
-$ npm i
-$ npm run start:dev
+$ git clone https://github.com/kreig303/device42-jira-node.git # add files locally
+$ cd device42-jira-node # go to the directory
+$ npm i # install all the things
+$ npm test # ensure the install is kosher
+$ npm run start:dev # start instance with debug logging
 ```
 
 ### Postman
@@ -62,11 +61,23 @@ $ npm run start:dev
 - Now setup the Action in your Device42 installation with a reference to the Endpoint.
 - Make changes per your Action and watch the results get sent to JIRA.
 
----
+## Optional Software
+
+- [Docker](https://www.docker.com/get-docker)
+
+### Docker
+
+- Make sure the `.env` file you need has already been created.
+
+```
+$ cd device42-jira-node # go to the directory
+$ docker build -t device42app . # build docker image
+$ docker run -p 5050:5050 device42app # execute docker image with port mapping
+```
 
 ## API Documentation
 
-API Documentation is available at (https://localhost:5050/docs) once installed.  Please note it is a very basic call i.e. the entire payload is not differentiated.
+API Documentation is available at (http://localhost:5050/docs) once installed.  Please note it is a very basic call i.e. the entire payload is not differentiated.
 
 <!-- HISTORY/ -->
 

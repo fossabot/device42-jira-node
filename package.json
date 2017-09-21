@@ -1,59 +1,60 @@
 {
-    "name": "device42-jira-node",
-    "version": "0.5.2",
-    "description": "Sample code for a Node 8+ server-side app to accept data from Device42 and create a JIRA Issue with the result.",
-    "scripts": {
-        "start:dev": "nodemon --ignore test/ ./index.js",
-        "start": "node ./index.js",
-        "test": "lab -c",
-        "compile": "projectz compile",
-        "posttest": "npm run compile"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kreig303/device42-jira-node.git"
-    },
-    "bugs": {
-        "url": "https://github.com/kreig303/device42-jira-node/issues"
-    },
-    "engines": {
-        "node": ">=8.0.0"
-    },
-    "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
-    "maintainers": [
-        "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+  "name": "device42-jira-node",
+  "version": "0.6.0",
+  "description": "Sample code for a Node 8+ server-side app to accept data from Device42 and create a JIRA Issue with the result.",
+  "scripts": {
+    "start:dev": "nodemon --ignore test/ ./index.js",
+    "start": "NODE_ENV=production forever ./index.js",
+    "test": "lab -c",
+    "compile": "projectz compile",
+    "posttest": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kreig303/device42-jira-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kreig303/device42-jira-node/issues"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "author": "2017+ Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)",
+  "maintainers": [
+    "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+  ],
+  "contributors": [
+    "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
+  ],
+  "license": "MIT",
+  "badges": {
+    "list": [
+      "travisci",
+      "daviddm",
+      "daviddmdev"
     ],
-    "contributors": [
-        "Kreig Zimmerman <kreig303@yahoo.com> (http://kreig.me)"
-    ],
-    "license": "MIT",
-    "badges": {
-        "list": [
-            "travisci",
-            "daviddm",
-            "daviddmdev"
-        ],
-        "config": {}
-    },
-    "dependencies": {
-        "boom": "^5.2.0",
-        "confidence": "^3.0.2",
-        "dotenv": "^4.0.0",
-        "hapi": "^16.6.0",
-        "inert": "^4.2.1",
-        "jira-client": "^6.4.0",
-        "joi": "^11.0.1",
-        "lout": "^10.0.2",
-        "vision": "^4.1.1"
-    },
-    "devDependencies": {
-        "code": "^5.0.0",
-        "eslint": "^4.7.0",
-        "eslint-config-hapi": "^10.1.0",
-        "eslint-plugin-security": "^1.4.0",
-        "jshint": "^2.9.5",
-        "lab": "14.3.0",
-        "nodemon": "^1.12.1",
-        "projectz": "^1.4.0"
-    }
+    "config": {}
+  },
+  "dependencies": {
+    "boom": "^5.2.0",
+    "confidence": "^3.0.2",
+    "dotenv": "^4.0.0",
+    "forever": "^0.15.3",
+    "hapi": "^16.6.0",
+    "inert": "^4.2.1",
+    "jira-client": "^6.4.0",
+    "joi": "^11.0.3",
+    "lout": "^10.0.2",
+    "request": "^2.82.0",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "code": "^5.1.0",
+    "eslint": "^4.7.2",
+    "eslint-config-hapi": "^10.1.0",
+    "eslint-plugin-security": "^1.4.0",
+    "lab": "^14.3.1",
+    "nodemon": "^1.12.1",
+    "projectz": "^1.4.0"
+  }
 }
