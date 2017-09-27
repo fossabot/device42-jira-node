@@ -7,13 +7,13 @@ const Server = require('../server')
 
 lab.experiment('Testing base URL for requests.', () => {
 
-    lab.test('It will return Demo API server is running.', (done) => {
+  lab.test('It will return Demo API server is running.', (done) => {
 
-        Server.inject('/', (res) => {
+    Server.inject('/', (res) => {
 
-            Code.expect(res.statusCode).to.equal(200)
-            Code.expect(res.result).to.equal('Demo API server is running.')
-            done()
-        })
+      Code.expect(res.statusCode).to.equal(200)
+      Code.expect(res.result).to.equal('Demo API server is running.')
+      done()
     })
+  })
 })
