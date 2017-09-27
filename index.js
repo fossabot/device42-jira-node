@@ -8,28 +8,28 @@ const Lout = require('lout')
 const Server = require('./server')
 
 const loutOpts = {
-    apiVersion: Package.version
+  apiVersion: Package.version
 }
 
 Server.register([
-    Vision,
-    Inert, {
-        register: Webhook,
-        routes: { prefix: '/api' }
-    },
-    {
-        register: Lout,
-        options: loutOpts
-    }
+  Vision,
+  Inert, {
+    register: Webhook,
+    routes: { prefix: '/api' }
+  },
+  {
+    register: Lout,
+    options: loutOpts
+  }
 ], (err) => {
 
-    if (err) {
-        Server.log('error', err)
-    }
+  if (err) {
+    Server.log('error', err)
+  }
 })
 
 Server.start(() => {
 
-    Server.log('info', `Environment is '${ process.env.NODE_ENV }'`)
-    Server.log('info', `Demo API server is running on port ${ Server.info.port }`)
+  Server.log('info', `Environment is '${ process.env.NODE_ENV }'`)
+  Server.log('info', `Demo API server is running on port ${ Server.info.port }`)
 })

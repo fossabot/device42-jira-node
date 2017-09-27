@@ -5,6 +5,8 @@
   "scripts": {
     "start:dev": "nodemon --ignore test/ ./index.js",
     "start": "NODE_ENV=production forever ./index.js",
+    "lint:fix": "eslint --ext .jsx,.js index.js server.js config.js server/** test/** --fix",
+    "lint": "eslint --ext .jsx,.js index.js server.js config.js server/** test/**",
     "test": "lab -c",
     "compile": "projectz compile",
     "posttest": "npm run compile"

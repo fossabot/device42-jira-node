@@ -33,7 +33,7 @@ module.exports.register = (server, options, next) => {
         }
       }
     },
-    handler: async(request, reply) => {
+    handler: async (request, reply) => {
 
       const jiraCall = new Jira(Config.get('/jira'))
       const issue = {
@@ -57,7 +57,7 @@ module.exports.register = (server, options, next) => {
       } catch (err) {
         server.log('error', err)
         reply({
-            message: Boom.boomify(err)
+          message: Boom.boomify(err)
         }).code(err.statusCode || '' === '' ? err.output.statusCode : err.statusCode)
       }
     }
