@@ -117,7 +117,8 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://kreig.me">Kreig Zimmerman</a> — <a href="https://github.com/kreig303/device42-jira-node/commits?author=kreig303" title="View the GitHub contributions of Kreig Zimmerman on repository kreig303/device42-jira-node">view contributions</a></li></ul>
+<ul><li><a href="http://kreig.me">Kreig Zimmerman</a> — <a href="https://github.com/kreig303/device42-jira-node/commits?author=kreig303" title="View the GitHub contributions of Kreig Zimmerman on repository kreig303/device42-jira-node">view contributions</a></li>
+<li><a href="http://greenkeeper.io/">Greenkeeper</a> — <a href="https://github.com/kreig303/device42-jira-node/commits?author=greenkeeperio-bot" title="View the GitHub contributions of Greenkeeper on repository kreig303/device42-jira-node">view contributions</a></li></ul>
 
 <a href="https://github.com/kreig303/device42-jira-node/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 

@@ -2,18 +2,19 @@
 
 const Code = require('code')
 const Lab = require('lab')
-const lab = exports.lab = Lab.script()
 const Server = require('../server')
 
-lab.experiment('Testing base URL for requests.', () => {
+const { describe, it } = exports.lab = Lab.script()
+const expect = Code.expect
 
-  lab.test('It will return Demo API server is running.', (done) => {
+describe('Base URL', () => {
+
+  it('returns \'Demo API server is running.\'', async () => {
 
     Server.inject('/', (res) => {
 
-      Code.expect(res.statusCode).to.equal(200)
-      Code.expect(res.result).to.equal('Demo API server is running.')
-      done()
+      expect(res.statusCode).to.equal(200)
+      expect(res.result).to.equal('Demo API server is running.')
     })
   })
 })
