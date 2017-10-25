@@ -56,7 +56,7 @@
     "eslint": "^4.8.0",
     "eslint-config-hapi": "^10.1.0",
     "eslint-plugin-security": "^1.4.0",
-    "lab": "^14.3.1",
+    "lab": "^15.1.0",
     "nodemon": "^1.12.1",
     "projectz": "^1.4.0"
   }
