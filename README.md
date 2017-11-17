@@ -22,6 +22,7 @@ Sample code for a Node 8+ server-side app to accept data from Device42 and creat
 
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/kreig303/device42-jira-node.svg)](https://greenkeeper.io/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkreig303%2Fdevice42-jira-node.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkreig303%2Fdevice42-jira-node?ref=badge_shield)
 
 ---
 
@@ -138,3 +139,7 @@ and licensed under:
 <ul><li><a href="http://spdx.org/licenses/MIT.html">MIT License</a></li></ul>
 
 <!-- /LICENSE -->
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkreig303%2Fdevice42-jira-node.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkreig303%2Fdevice42-jira-node?ref=badge_large)
