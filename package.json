@@ -58,8 +58,10 @@
     "eslint-config-hapi": "^11.0.0",
     "eslint-plugin-security": "^1.4.0",
     "lab": "^15.0.0",
+    "license-checker": "^15.0.0",
     "nodemon": "^1.12.1",
     "projectz": "^1.4.0",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "yui-lint": "^0.2.0"
   }
 }
