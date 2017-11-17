@@ -54,9 +54,6 @@
   },
   "devDependencies": {
     "code": "^5.1.0",
-    "eslint": "^4.8.0",
-    "eslint-config-hapi": "^11.0.0",
-    "eslint-plugin-security": "^1.4.0",
     "lab": "^15.0.0",
     "license-checker": "^15.0.0",
     "nodemon": "^1.12.1",
