@@ -3,33 +3,45 @@
 const Package = require('./package')
 const Vision = require('vision')
 const Inert = require('inert')
-const Webhook = require('./server/api/index')
-const Lout = require('lout')
+//const Webhook = require('./server/api/index')
+//const Lout = require('lout')
 const Server = require('./server')
+const Bounce = require('bounce')
 
-const loutOpts = {
-  apiVersion: Package.version
+// const loutOpts = {
+//   apiVersion: Package.version
+// }
+async function registerPIs () {
+  try {
+    await Server.register({ plugin: Vision })
+    await Server.register({ plugin: Inert })
+    // await Server.register({
+    //   register: Webhook,
+    //   options: { routes: { prefix: '/api' } }
+    // })
+    // await Server.register({
+    //   plugin: Lout,
+    //   options: loutOpts
+    // })
+  }
+  catch (err) {
+    Bounce.rethrow(err, 'system')
+    throw new Error('Did not register all.')
+  }
 }
 
-Server.register([
-  Vision,
-  Inert, {
-    register: Webhook,
-    routes: { prefix: '/api' }
-  },
-  {
-    register: Lout,
-    options: loutOpts
+async function startUp () {
+  try {
+    await Server.start()
   }
-], (err) => {
-
-  if (err) {
-    Server.log('error', err)
+  catch (err) {
+    Bounce.rethrow(err, 'system')
+    throw new Error('Server did not start.')
   }
-})
+}
 
-Server.start(() => {
+registerPIs()
+startUp()
 
-  Server.log('info', `Environment is '${ process.env.NODE_ENV }'`)
-  Server.log('info', `Demo API server is running on port ${ Server.info.port }`)
-})
+Server.log('info', `Environment is '${process.env.NODE_ENV}'`)
+Server.log('info', `Demo API server is running on port ${Server.info.port}`)

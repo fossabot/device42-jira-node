@@ -1,6 +1,6 @@
 {
   "name": "device42-jira-node",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Sample code for a Node 8+ server-side app to accept data from Device42 and create a JIRA Issue with the result.",
   "scripts": {
     "start:dev": "nodemon --ignore test/ ./index.js",
@@ -39,25 +39,27 @@
     "config": {}
   },
   "dependencies": {
-    "boom": "^6.0.0",
+    "boom": "^7.0.0",
+    "bounce": "^1.2.0",
     "confidence": "^3.0.2",
     "dotenv": "^4.0.0",
     "forever": "^0.15.3",
-    "hapi": "^16.6.2",
-    "inert": "^4.2.1",
+    "hapi": "^17.0.0",
+    "inert": "^5.0.0",
     "jira-client": "^6.4.0",
-    "joi": "^11.1.1",
+    "joi": "^13.0.0",
     "lout": "^10.0.2",
     "request": "^2.83.0",
-    "vision": "^4.1.1"
+    "vision": "^5.0.0"
   },
   "devDependencies": {
     "code": "^5.1.0",
     "eslint": "^4.8.0",
-    "eslint-config-hapi": "^10.1.0",
+    "eslint-config-hapi": "^11.0.0",
     "eslint-plugin-security": "^1.4.0",
-    "lab": "^14.3.1",
+    "lab": "^15.0.0",
     "nodemon": "^1.12.1",
-    "projectz": "^1.4.0"
+    "projectz": "^1.4.0",
+    "standard": "^10.0.3"
   }
 }

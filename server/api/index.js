@@ -4,19 +4,17 @@ const Jira = require('jira-client')
 const Joi = require('joi')
 const Config = require('../../config')
 const Boom = require('boom')
+const Bounce = require('bounce')
 
-module.exports.register = (server, options, next) => {
-
+exports.plugin = {
+  register: (server, options) => {
   server.route({
     method: '*',
     path: '/',
-    handler: (request, reply) => {
-
-      reply({
-        message: `No ${ request.method.toUpperCase() } method configured.`
-      }).code(405)
+    handler: (request, h) => {
+      return h.response(`No ${request.method.toUpperCase()} method configured.`).code(405)
     }
-  });
+  })
 
   server.route({
     method: ['POST'],
@@ -33,39 +31,34 @@ module.exports.register = (server, options, next) => {
         }
       }
     },
-    handler: async (request, reply) => {
-
+    handler: async (request, h) => {
       const jiraCall = new Jira(Config.get('/jira'))
       const issue = {
-        "fields": {
-          "project": {
-            "key": process.env.JIRA_PROJ
+        'fields': {
+          'project': {
+            'key': process.env.JIRA_PROJ
           },
-          "summary": request.payload.action,
-          "description":request.payload.data,
-          "issuetype": {
-            "name": process.env.JIRA_TYPE
+          'summary': request.payload.action,
+          'description': request.payload.data,
+          'issuetype': {
+            'name': process.env.JIRA_TYPE
           }
         }
       }
       server.log('debug', `issue: ${JSON.stringify(issue)}`)
       try {
         await jiraCall.addNewIssue(issue)
-        reply({
-          message: `Data accepted via ${ request.method.toUpperCase() }.`
-        }).code(202)
+        return h.response(`Data accepted via ${request.method.toUpperCase()}.`).code(202)
       } catch (err) {
+        Bounce.rethrow(err, 'system')
         server.log('error', err)
-        reply({
-          message: Boom.boomify(err)
-        }).code(err.statusCode || '' === '' ? err.output.statusCode : err.statusCode)
+        return h.response(Boom.boomify(err)).code(err.statusCode || '' === '' ? err.output.statusCode : err.statusCode)
       }
     }
   })
-  next()
-
-}
-
-module.exports.register.attributes = {
+//  next()
+  },
   pkg: require('../../package.json')
 }
+// module.exports.register.attributes = {
+// }
